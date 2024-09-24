@@ -1,13 +1,17 @@
 <template>
-    <div>
-        <router-link to="/all" class="filter-link">
-            <button :class="{ active: currentFilter === 'all' }">{{ $t('all') }}</button>
+    <div class="app-filters">
+        <router-link to="/all" class="app-filters__link">
+            <button :class="['app-filters__button', { 'app-filters__button--active': currentFilter === 'all' }]">{{
+                $t('all') }}</button>
         </router-link>
-        <router-link to="/active" class="filter-link">
-            <button :class="{ active: currentFilter === 'active' }">{{ $t('active') }}</button>
+        <router-link to="/active" class="app-filters__link">
+            <button :class="['app-filters__button', { 'app-filters__button--active': currentFilter === 'active' }]">{{
+                $t('active') }}</button>
         </router-link>
-        <router-link to="/completed" class="filter-link">
-            <button :class="{ active: currentFilter === 'completed' }">{{ $t('completed') }}</button>
+        <router-link to="/completed" class="app-filters__link">
+            <button
+                :class="['app-filters__button', { 'app-filters__button--active': currentFilter === 'completed' }]">{{
+                    $t('completed') }}</button>
         </router-link>
     </div>
 </template>
@@ -24,17 +28,32 @@ const currentFilter = computed(() => {
 </script>
 
 <style scoped>
-button {
-    margin-right: 5px;
-    padding: 5px 10px;
+.app-filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
-.active {
+.app-filters__link {
+    text-decoration: none;
+}
+
+.app-filters__button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s, font-weight 0.3s;
+}
+
+.app-filters__button--active {
     font-weight: bold;
     background-color: #d3d3d3;
 }
 
-.filter-link {
-    text-decoration: none;
+.app-filters__button:hover {
+    background-color: #e0e0e0;
 }
 </style>

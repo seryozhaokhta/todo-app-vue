@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="app">
     <AppHeader />
-    <AppAddTodo />
     <AppFilters />
+    <AppAddTodo />
     <router-view />
     <AppFooter />
   </div>

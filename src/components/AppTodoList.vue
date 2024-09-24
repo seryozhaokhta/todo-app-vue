@@ -1,6 +1,6 @@
 <template>
-    <Draggable v-model="orderedTodos" @end="onDragEnd" tag="ul" :ghost-class="'ghost'" :chosen-class="'chosen'"
-        :drag-class="'dragging-over'" item-key="id">
+    <Draggable v-model="orderedTodos" @end="onDragEnd" tag="ul" :ghost-class="'todo-list__ghost'"
+        :chosen-class="'todo-list__chosen'" :drag-class="'todo-list__dragging-over'" item-key="id" class="todo-list">
         <template #item="{ element }">
             <AppTodoItem :todo="element" @remove="removeTodo" @toggle="toggleComplete" @update="updateTodoText" />
         </template>
@@ -54,21 +54,21 @@ const onDragEnd = (event: any) => {
 </script>
 
 <style scoped>
-ul {
+.todo-list {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-.ghost {
+.todo-list__ghost {
     opacity: 0.5;
 }
 
-.chosen {
+.todo-list__chosen {
     background-color: #f0f0f0;
 }
 
-.dragging-over {
+.todo-list__dragging-over {
     border: 2px dashed #646cff;
 }
 </style>

@@ -27,7 +27,7 @@ const messages = {
         all: 'Все',
         active: 'Активные',
         completed: 'Завершённые',
-        footer: '© 2024 Ваш ToDo Приложение',
+        footer: '© 2024 Ваше приложение для заметок',
         clearCompleted: 'Очистить завершённые',
         toggleLanguage: 'Переключиться на английский',
         totalTasks: 'Всего Задач',

@@ -1,18 +1,18 @@
 <template>
-    <footer>
-        <p>{{ $t('footer') }}</p>
-        <div class="stats">
-            <div class="stat-item">
-                <span class="label">{{ $t('totalTasks') }}:</span>
-                <span class="value">{{ totalTasks }}</span>
+    <footer class="app-footer">
+        <p class="app-footer__text">{{ $t('footer') }}</p>
+        <div class="app-footer__stats">
+            <div class="app-footer__stat-item">
+                <span class="app-footer__label">{{ $t('totalTasks') }}:</span>
+                <span class="app-footer__value">{{ totalTasks }}</span>
             </div>
-            <div class="stat-item">
-                <span class="label">{{ $t('completedTasks') }}:</span>
-                <span class="value">{{ completedTasks }}</span>
+            <div class="app-footer__stat-item">
+                <span class="app-footer__label">{{ $t('completedTasks') }}:</span>
+                <span class="app-footer__value">{{ completedTasks }}</span>
             </div>
-            <div class="stat-item">
-                <span class="label">{{ $t('completion') }}:</span>
-                <span class="value">{{ completionPercentage }}%</span>
+            <div class="app-footer__stat-item">
+                <span class="app-footer__label">{{ $t('completion') }}:</span>
+                <span class="app-footer__value">{{ completionPercentage }}%</span>
             </div>
         </div>
     </footer>
@@ -33,36 +33,36 @@ const completionPercentage = computed(() => {
 </script>
 
 <style scoped>
-footer {
+.app-footer {
     text-align: center;
     margin-top: 20px;
     font-size: 14px;
     color: #999;
 }
 
-.stats {
+.app-footer__stats {
     display: flex;
     justify-content: center;
     gap: 20px;
     margin-top: 10px;
 }
 
-.stat-item {
+.app-footer__stat-item {
     display: flex;
     align-items: center;
 }
 
-.label {
+.app-footer__label {
     font-weight: bold;
     margin-right: 5px;
 }
 
-.value {
+.app-footer__value {
     color: #333;
 }
 
 @media (max-width: 600px) {
-    .stats {
+    .app-footer__stats {
         flex-direction: column;
         gap: 10px;
     }
