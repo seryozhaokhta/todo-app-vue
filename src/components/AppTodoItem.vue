@@ -8,7 +8,7 @@
             </div>
         </div>
         <div v-else class="edit">
-            <input v-model="editedText" @keyup.enter="saveEdit" @blur="saveEdit" />
+            <input v-model="editedText" @keyup.enter="saveEdit" @blur="saveEdit" class="todo-input" />
             <button @click="saveEdit">{{ $t('saveButton') }}</button>
             <button @click="cancelEdit">{{ $t('cancelButton') }}</button>
         </div>
@@ -82,14 +82,24 @@ const cancelEdit = () => {
     width: 100%;
 }
 
-button {
-    margin-left: 5px;
-    padding: 2px 5px;
-    cursor: pointer;
+.todo-input {
+    padding: 8px 12px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    flex: 1;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-input {
-    flex: 1;
-    padding: 2px 5px;
+.todo-input:focus {
+    border-color: #646cff;
+    box-shadow: 0 0 5px rgba(100, 108, 255, 0.5);
+    outline: none;
+}
+
+button {
+    margin-left: 10px;
+    padding: 8px 12px;
+    font-size: 1em;
 }
 </style>

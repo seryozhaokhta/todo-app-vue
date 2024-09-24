@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <input v-model="newTodo" :placeholder="$t('addTodoPlaceholder')" @keyup.enter="addNewTodo" />
+    <div class="add-todo">
+        <input v-model="newTodo" :placeholder="$t('addTodoPlaceholder')" @keyup.enter="addNewTodo" class="todo-input" />
         <button @click="addNewTodo">{{ $t('addButton') }}</button>
     </div>
 </template>
@@ -22,12 +22,31 @@ const addNewTodo = () => {
 </script>
 
 <style scoped>
-input {
-    padding: 5px;
-    margin-right: 5px;
+.add-todo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-input {
+    padding: 10px 15px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    flex: 1;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.todo-input:focus {
+    border-color: #646cff;
+    box-shadow: 0 0 5px rgba(100, 108, 255, 0.5);
+    outline: none;
 }
 
 button {
-    padding: 5px 10px;
+    margin-left: 10px;
+    padding: 10px 15px;
+    font-size: 1em;
 }
 </style>
