@@ -9,7 +9,7 @@ const messages = {
         all: 'All',
         active: 'Active',
         completed: 'Completed',
-        footer: '© 2024 Your ToDo App',
+        footer: '© 2024 Todo App',
         clearCompleted: 'Clear Completed',
         toggleLanguage: 'Russian',
         totalTasks: 'Total Tasks',
@@ -27,7 +27,7 @@ const messages = {
         all: 'Все',
         active: 'Активные',
         completed: 'Завершённые',
-        footer: '© 2024 Ваше приложение для заметок',
+        footer: '© 2024 Приложение «Список дел»',
         clearCompleted: 'Очистить завершённые',
         toggleLanguage: 'Английский',
         totalTasks: 'Всего Задач',
@@ -40,7 +40,7 @@ const messages = {
 };
 
 const i18n = createI18n({
-    locale: 'en', // начальный язык
+    locale: 'en',
     fallbackLocale: 'en',
     messages,
 });
