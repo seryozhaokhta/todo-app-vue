@@ -40,12 +40,15 @@ const currentFilter = computed(() => {
 
 .app-filters__button {
     margin-right: 5px;
-    padding: 5px 10px;
+    padding: 10px 15px;
+    /* Increased padding for better touch targets */
     border: none;
     background-color: #f0f0f0;
     cursor: pointer;
     border-radius: 4px;
     transition: background-color 0.3s, font-weight 0.3s;
+    font-size: 1em;
+    /* Increased font size */
 }
 
 .app-filters__button--active {
@@ -55,5 +58,19 @@ const currentFilter = computed(() => {
 
 .app-filters__button:hover {
     background-color: #e0e0e0;
+}
+
+@media (max-width: 600px) {
+    .app-filters {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .app-filters__button {
+        width: 100%;
+        max-width: 200px;
+        margin: 5px 0;
+    }
 }
 </style>

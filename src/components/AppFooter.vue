@@ -38,6 +38,7 @@ const completionPercentage = computed(() => {
     margin-top: 20px;
     font-size: 14px;
     color: #999;
+    padding: 0 20px;
 }
 
 .app-footer__stats {
@@ -65,6 +66,15 @@ const completionPercentage = computed(() => {
     .app-footer__stats {
         flex-direction: column;
         gap: 10px;
+    }
+
+    .app-footer__stat-item {
+        justify-content: center;
+        font-size: 16px;
+    }
+
+    .app-footer__text {
+        font-size: 16px;
     }
 }
 </style>

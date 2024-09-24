@@ -80,6 +80,11 @@ const cancelEdit = () => {
 
 .todo-item__text {
     cursor: pointer;
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 10px;
 }
 
 .todo-item__buttons {
@@ -121,5 +126,35 @@ const cancelEdit = () => {
     border-color: #646cff;
     box-shadow: 0 0 5px rgba(100, 108, 255, 0.5);
     outline: none;
+}
+
+@media (max-width: 600px) {
+    .todo-item__view {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .todo-item__buttons {
+        margin-top: 10px;
+    }
+
+    .todo-item__button {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .todo-item__edit {
+        flex-direction: column;
+    }
+
+    .todo-item__input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .todo-item__button {
+        width: 100%;
+        max-width: 200px;
+    }
 }
 </style>
